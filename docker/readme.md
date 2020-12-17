@@ -60,7 +60,7 @@ docker search mysql
 docker image history in28min/hello-world-java:0.0.1.RELEASE
 docker image history 100229ba687e
 docker image inspect 100229ba687e
-docker image remove mysql
+docker image remove mysql -- Can remove images only if all corresponding containers are stopped
 docker image remove in28min/hello-world-java:0.0.1.RELEASE
 docker container rm 3e657ae9bd16
 docker container ls -a
@@ -68,9 +68,9 @@ docker container pause 832
 docker container unpause 832
 docker container stop 832
 docker container inspect ff521fa58db3
-docker container prune
+docker container prune -- Remove all containers - even the stopped ones
 docker system
-docker system df
+docker system df -- Shows memory usage of all docker images and containers
 docker system info
 docker system prune -a
 docker top 9009722eac4d
